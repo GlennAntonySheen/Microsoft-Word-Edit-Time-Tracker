@@ -2,6 +2,15 @@ import os
 import win32com.client
 
 def get_total_editing_time(folder_path):
+    """
+    The function `get_total_editing_time` calculates the total editing time in minutes for all Word
+    documents in a specified folder path.
+    
+    :param folder_path: The `folder_path` parameter in the `get_total_editing_time` function is the path
+    to the folder containing the Word documents for which you want to calculate the total editing time.
+    This function opens each Word document in the specified folder, retrieves the editing time for each
+    document, and then calculates the
+    """
     word = win32com.client.Dispatch("Word.Application")
     word.Visible = False  # Keep Word hidden
     
